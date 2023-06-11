@@ -61,34 +61,26 @@ function Registration() {
     }
 
     const handleSubmit = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
         if (firstName === '') {
             updateIsFirstNameValid(false)
-            event.preventDefault();
-            event.stopPropagation();
             return;
         }
         if (lastName === '') {
             updateIsLastNameValid(false)
-            event.preventDefault();
-            event.stopPropagation();
             return;
         }
         if (email === '') {
             updateIsEmailValid(false)
-            event.preventDefault();
-            event.stopPropagation();
             return;
         }
         if (password === '') {
             updateIsPasswordValid(false)
-            event.preventDefault();
-            event.stopPropagation();
             return;
         }
         if (confirmPassword === '') {
             updateIsConfirmPasswordValid(false)
-            event.preventDefault();
-            event.stopPropagation();
             return;
         }
         if (isFirstNameValid && isLastNameValid && isEmailValid && isPasswordValid && isConfirmPasswordValid) {
@@ -98,10 +90,6 @@ function Registration() {
                 email: email
             }));
             navigate('/profile');
-        } else {
-            event.preventDefault();
-            event.stopPropagation();
-            return;
         }
     }
 
