@@ -70,7 +70,7 @@ const ProfilePage = () => {
             <img
               src={user.picture}
               id={user._id}
-              alt="Profile Picture"
+          
               style={{ width: '50px', height: '50px', marginRight: '10px', borderRadius: '50%' }}
             />
             <p id={user._id} style={{ fontWeight: 'bold', cursor: 'pointer' }}>
