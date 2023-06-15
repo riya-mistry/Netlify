@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, useNavigation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -30,7 +30,7 @@ const LoginPage = () => {
       .then((response) => response.json())
       .then((data) => {
         // Handle the response, e.g., check for successful login
-        if (data.message == "Login success!") {
+        if (data.message === "Login success!") {
           // Redirect to the profile listing page
           
         navigation("/profile");
