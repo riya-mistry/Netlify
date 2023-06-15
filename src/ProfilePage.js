@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import ProfileDetailPage from './ProfileDetailPage';
+
 import { useNavigate } from 'react-router-dom';
 
 const ProfilePage = () => {
   const [users, setUsers] = useState([]);
-  const [selectedUserId, setSelectedUserId] = useState(null);
+  
   const [filteredUsers,setFilteredUsers]=useState([])
   const navigate=useNavigate()
 
@@ -27,7 +27,7 @@ const ProfilePage = () => {
   const handleSearch = (event) => {
     const term = event.target.value;
     console.log(term)
-    if(term=='')
+    if(term==='')
     {
         setUsers([...filteredUsers])
     }
