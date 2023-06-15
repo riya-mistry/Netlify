@@ -1,15 +1,19 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginPage from './LoginPage';
+import ProfilePage from './ProfilePage';
+import ProfileDetailPage from './ProfileDetailPage';
 
-
-import './App.css';
-import Registration from './Pages/Registartion';
-import Profile from "./Pages/Profile";
-
-function App() {
+const App = () => {
   return (
-    <>
-    
-    </>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<LoginPage/>} />
+        <Route path="/profile" element={<ProfilePage/>} />
+        <Route path="/profile/user" element={<ProfileDetailPage/>} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
