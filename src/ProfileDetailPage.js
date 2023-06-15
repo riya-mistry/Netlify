@@ -9,7 +9,6 @@ const ProfileDetailPage = () => {
 
   useEffect(() => {
     const fetchUser = async () => {
-        console.log(location.state)
         const userId=location.state.id;
       try {
         const response = await axios.get(`https://express-t4.onrender.com/api/users/${userId}`);
